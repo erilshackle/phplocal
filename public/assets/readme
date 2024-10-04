@@ -1,0 +1,11 @@
+### You have an constant variable to access the assets quicker
+
+``` php
+<link rel="stylesheet" href="<?= assets ?>/css/style.css">
+<link rel="stylesheet" href="<?= assets_css ?>/dashboard.css">
+
+<script src="<?= assets_js ?>/main.js"></script>
+
+<img src="<?= assets_img ?>/default_profile.png"/>
+
+```

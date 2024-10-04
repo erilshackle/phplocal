@@ -1,0 +1,7 @@
+you can include all files here by using
+
+page_include('filename.ext')
+
+and
+
+page_include('filename.ext', $array)

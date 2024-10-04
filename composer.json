@@ -1,0 +1,14 @@
+{
+    "name": "erilshk/phplocal2",
+    "autoload": {
+        "psr-4": {
+            "Erilshk\\Phplocal2\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "erilshk"
+        }
+    ],
+    "require": {}
+}

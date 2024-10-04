@@ -1,0 +1,18 @@
+### The only rule is to include once `core.php` in all acessible page
+
+##### You can put in in one header file and then include the header in other file
+
+#### You can read readme in layout folder for more info about page functions
+
+### The `.htaccess` file, is very important, dont loose it
+
+### `404.php` is the error page, you can do what you want with it
+
+### `sooon.php` is the page for cooming soon featuse, to enable it:
+uncommnet these in '.htaccess' file:
+``` php
+# RewriteCond %{REQUEST_URI} !^/public/assets/ [NC]
+# RewriteRule ^(.*)$ sooon.php [L]
+```
+
+### `assets` folder is where you will put your statics file there

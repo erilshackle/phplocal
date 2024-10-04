@@ -1,0 +1,67 @@
+### you can iclude a header file and footer file from layout by using the function 
+
+``` php
+page_header() and page_footer()
+```
+
+### you can also do this both at once by using
+
+``` php
+page_layout('header', 'footer', $data = []);
+```
+
+### you can extend a layout by using
+
+``` php
+page_extends('layout.php', $data = []);
+```
+but you will have to include ``core.php`` before
+
+
+#### examples :
+``` php
+include '../core.php';
+page_extends('_layout.php');
+
+
+// layout.php
+<html>
+<head>
+<title>title</title>
+</head>
+<body>
+    @{{content}}  <!-- using this to tell where to place the page extende: must the @{{ content }} --->
+</body>
+</html>
+```
+
+#### examples :
+``` php
+include '_layout.php';
+
+// layout.php
+<?php 
+    include_once '../core.php';
+    page_header('dashboard/header.php');
+    page_footer('dashboard/footer.php');
+?>
+```
+
+
+#### examples :
+``` php
+include '_layout.php';
+
+// layout.php
+<?php 
+    include_once '../core.php';
+    page_layout('dashboard/header.php', 'dashboard/footer.php', [
+        'title' => 'Dashboard',
+    ]);
+?>
+```
+
+### what I prefer?
+I prefer include _layout.php
+and layout.php will call the page_header_footer function
+it also allows the page to controll the acess and other permition on thee page
